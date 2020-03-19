@@ -1,0 +1,76 @@
+<form id="alta_tarea" action="{SET}" method="POST">
+    
+    <div class="form-group">
+        <label for="titulo">Título</label>
+        <input type="text" class="form-control" id="titulo" name="titulo">
+    </div>
+    
+    <div class="form-group">
+        <label for="id_usuario">Asignada a</label>
+        <select class="form-control" id="id_usuario" name="id_usuario">
+            {usuarios}
+        </select>
+    </div>
+    
+    <div class="form-group">
+        <label for="descripcion">Descripción</label>
+        <textarea class="form-control" id="descripcion" rows="10" name="descripcion"></textarea>
+    </div>
+    
+    <div class="row">
+        <div class="col">
+            <label for="fecha_alta">Fecha de alta</label>
+            <input type="text" class="form-control datepicker" id="fecha_alta" name="fecha_alta">
+        </div>
+        <div class="col">
+            <label for="fecha_limite">Fecha Límite</label>
+            <input type="text" class="form-control datepicker" id="fecha_limite" name="fecha_limite">
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col">
+            <label for="fecha_realizacion">Fecha de Realización</label>
+            <input type="text" class="form-control datepicker" id="fecha_realizacion" name="fecha_realizacion">
+        </div>
+        <div class="col">
+            <label for="tiempo_realizacion">Tiempo de Realización</label>
+            <input type="number" class="form-control" value="0.00" step="1" data-decimals="2" name="tiempo_realizacion" id="tiempo_realizacion"/>
+        </div>
+    </div>
+    
+    <div class="form-group">
+        <label for="estado">Estado</label>
+        <select class="form-control" id="estado" name="estado">
+            {estados}
+        </select>
+    </div>
+    
+    <div class="form-group">
+        <label for="ficheros_modificados">Ficheros Modificados</label>
+        <textarea class="form-control" id="ficheros_modificados" rows="5" name="ficheros_modificados"></textarea>
+    </div>
+    
+    <div class="form-group">
+        <label for="notas_desarrollador">Notas Desarrollador</label>
+        <textarea class="form-control" id="notas_desarrollador" rows="5" name="notas_desarrollador"></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary" name="enviar">Agregar</button>
+    
+</form>
+
+<script type="text/javascript">
+    
+    $(function () {
+        $('.form-control.datepicker').datepicker({
+            isRTL: false,
+            format: 'dd/mm/yyyy',
+            autoclose: true,
+        });
+        
+        $("input[type='number']").inputSpinner()
+    });
+    
+</script>
+

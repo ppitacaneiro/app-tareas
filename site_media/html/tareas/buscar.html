@@ -1,0 +1,63 @@
+<form action="{GET}" method="GET">
+    <div class="row">
+        <div class="col">
+            <div class="form-group">
+                <label for="inputState">Usuario</label>
+                <select id="inputState" class="form-control">
+                    <option selected>Seleccionar...</option>
+                    {usuarios}
+                </select>
+            </div>
+        </div>
+        <div class="col">
+            <div class="form-group">
+                <label for="inputState">Estado</label>
+                <select id="inputState" class="form-control">
+                    <option selected>Seleccionar...</option>
+                    {estados}
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col text-right">
+            <button type="submit" class="btn btn-primary">Buscar</button>
+        </div>
+    </div>
+
+    <table class="table table-striped mt-5">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Titulo</th>
+                <th scope="col">Fecha Limite</th>
+                <th scope="col">Estado</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit</td>
+                <td>14/12/2019</td>
+                <td>Pendiente</td>
+                <td class="text-right">@mdo</td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>Ut tempus vulputate ipsum, quis iaculis diam tempus eget</td>
+                <td>18/12/2019</td>
+                <td>En Proceso</td>
+                <td class="text-right">@mdo</td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>Etiam ultrices dictum tortor condimentum mattis</td>
+                <td>22/12/2019</td>
+                <td>Realizado</td>
+                <td class="text-right">@mdo</td>
+            </tr>
+        </tbody>
+    </table>
+
+</form>
